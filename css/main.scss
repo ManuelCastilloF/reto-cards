@@ -1,0 +1,44 @@
+// Required
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+// Create your own map
+$custom-colors: (
+  "img":rgb(170, 92, 219),
+  "fondo": hsl(233, 47%, 7%),
+  "card":hsl(244, 38%, 16%)
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+$font-family-base: 'Inter',
+sans-serif;
+
+.card-img-top {
+	mix-blend-mode: multiply;
+}
+
+.bg-fondo{
+    background-color: hsl(233, 47%, 7%);
+}
+
+.bg-card{
+    background-color: hsl(244, 38%, 16%);
+}
+
+.bg-img {
+	background-color: hsl(277, 64%, 61%);
+}
+
+.text-img {
+    color: hsl(277, 64%, 61%);
+}
+.img-0{
+    padding: none;
+}
